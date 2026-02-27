@@ -82,4 +82,10 @@ Notification alerts were configured to be delivered via email and integrated wit
 
 <p align="center"> <img width="950" height="769" alt="Screenshot 2026-02-27 122950" src="https://github.com/user-attachments/assets/d2912d88-1c62-4986-8d1f-7524f4b49a55" />
 
+## Errors and Troubleshooting
+
+
+## Conclusion
+In conclusion, this project demonstrates the effective design of a secure and scalable cloud infrastructure within Amazon Web Services, combining segmented networking with controlled internet access through NAT-based routing to protect private resources while maintaining required connectivity. Centralized monitoring using Datadog provides continuous visibility into system performance and health, while integrated alerting workflows through Slack and email enable timely response to infrastructure events. Together, these components illustrate how multi-environment workloads can be secured, monitored, and managed efficiently, reinforcing best practices for modern cloud operations and proactive infrastructure management.
+
 
