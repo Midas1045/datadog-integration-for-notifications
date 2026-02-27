@@ -65,12 +65,14 @@ A. Steps
   * Run the "sudo apt update" and "sudo apt upgrade" command to to refresh package lists and upgrade system dependencies to their latest versions.
   * The next step is to establish an SSH connection from the public instance to the private instance and update the system dependencies accordingly.
 
-<p align="center"> <img width="987" height="594" alt="Screenshot 2026-02-27 024002" src="https://github.com/user-attachments/assets/5385c81c-8c17-4c16-8036-1b8e2c69cd38" />
+<p align="center"> <img width="800" height="400" alt="Screenshot 2026-02-27 024002" src="https://github.com/user-attachments/assets/5385c81c-8c17-4c16-8036-1b8e2c69cd38" />
 
 ## Datadog Installation and Configuration
 Configured monitoring agents from Datadog on both public and private EC2 instances to enable centralized system visibility and performance tracking. API keys and configuration files were applied to ensure secure data transmission, while dashboards and alerting policies were set up to monitor infrastructure health, resource utilization, and network activity across the environment.
 
-<p align="center"> 
+<p align="center"> <img width="1000" height="700" alt="image" src="https://github.com/user-attachments/assets/5978be27-8759-4123-823d-55a46da7fc27" />
+<p align="center"> <img width="1000" height="700" alt="image" src="https://github.com/user-attachments/assets/33d713b5-87f7-4409-8daa-b664276d6622" />
+
 
 ## Alerting and Notification Integration
 Notification alerts were configured to be delivered via email and integrated with Slack to enable real-time communication and rapid incident response. Alerting policies were customized based on predefined thresholds for CPU utilization, memory usage, disk performance, and network activity, ensuring that critical events are promptly escalated to the appropriate channels. This setup enhanced operational visibility, improved response times, and ensured continuous monitoring across both public and private instances.
