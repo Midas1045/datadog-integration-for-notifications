@@ -69,7 +69,8 @@ A. Steps
 <p align="center"> <img width="800" height="400" alt="Screenshot 2026-02-27 024002" src="https://github.com/user-attachments/assets/5385c81c-8c17-4c16-8036-1b8e2c69cd38" />
 
 ## Datadog Installation and Configuration
-Configured monitoring agents from Datadog on both public and private EC2 instances to enable centralized system visibility and performance tracking. API keys and configuration files were applied to ensure secure data transmission, while dashboards and alerting policies were set up to monitor infrastructure health, resource utilization, and network activity across the environment.
+Configured monitoring agents from Datadog on both public and private EC2 instances to enable centralized system visibility and performance tracking. API keys and configuration files were applied to ensure secure data transmission, while dashboards and alerting policies were set up to monitor infrastructure health, resource utilization, and network activity across the environment. For Datadog installation, it is essential to explicitly define hostnames to prevent identification issues that can cause the agent to fail during startup and disrupt metric collection.
+
 * Documentation: 
   https://github.com/Midas1045/SSH-hardening-and-System-monitoring/edit/main/README.md#datadog-installation-and-configuration
 
@@ -83,7 +84,9 @@ Notification alerts were configured to be delivered via email and integrated wit
 <p align="center"> <img width="950" height="769" alt="Screenshot 2026-02-27 122950" src="https://github.com/user-attachments/assets/d2912d88-1c62-4986-8d1f-7524f4b49a55" />
 
 ## Errors and Troubleshooting
-
+1. Key Pair Permission and File Location Issue
+   * During the SSH setup process, access to EC2 instances was initially unsuccessful due to improper file permissions on the downloaded key pair. The key file had been saved in a directory mounted from the            Windows file system (WSL /mnt path), which prevented Linux permission changes using chmod. As a result, the private key remained overly permissive and was rejected by SSH with an “UNPROTECTED PRIVATE KEY          FILE” error.
+   * To resolve this, the key pair was moved to the Linux home directory within WSL, where native file permissions could be enforced. After relocating the file and restricting permissions to read-only for the          owner (sudo chmod 400), SSH authentication succeeded and secure access to the instances was restored.
 
 ## Conclusion
 In conclusion, this project demonstrates the effective design of a secure and scalable cloud infrastructure within Amazon Web Services, combining segmented networking with controlled internet access through NAT-based routing to protect private resources while maintaining required connectivity. Centralized monitoring using Datadog provides continuous visibility into system performance and health, while integrated alerting workflows through Slack and email enable timely response to infrastructure events. Together, these components illustrate how multi-environment workloads can be secured, monitored, and managed efficiently, reinforcing best practices for modern cloud operations and proactive infrastructure management.
