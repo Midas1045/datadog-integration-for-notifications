@@ -49,6 +49,7 @@ Provisioned an NAT Gateway within the public subnet to provide secure outbound i
 
 ## Configuration and Launching of Public and Private EC2 Instances
 Launched an EC2 instance in the public subnet with security groups having specified inbound and outbound rules for traffic from trusted sources, enabling direct management and public service hosting. A Private EC2 instance was launched in the private subnet with security groups restricting inbound access to the public subnet only , ensuring sensitive workloads remain protected while also connecting to the internet via the NAT Gateway for updates and installations. The same key pair was used for both instances to avoid authentication conflicts. 
+* Documentation: https://github.com/Midas1045/AWS-Vpc#creating-and-launching-an-elastic-cloud-compute-on-the-frontend-subnet
 
 <p align="center"> <img width="900" height="600" alt="image" src="https://github.com/user-attachments/assets/9fe43550-8fe1-4fd4-a933-aa2b9a7dacbf" />
 
@@ -69,6 +70,8 @@ A. Steps
 
 ## Datadog Installation and Configuration
 Configured monitoring agents from Datadog on both public and private EC2 instances to enable centralized system visibility and performance tracking. API keys and configuration files were applied to ensure secure data transmission, while dashboards and alerting policies were set up to monitor infrastructure health, resource utilization, and network activity across the environment.
+* Documentation: 
+  https://github.com/Midas1045/SSH-hardening-and-System-monitoring/edit/main/README.md#datadog-installation-and-configuration
 
 <p align="center"> <img width="1000" height="700" alt="image" src="https://github.com/user-attachments/assets/5978be27-8759-4123-823d-55a46da7fc27" />
 <p align="center"> <img width="1000" height="700" alt="image" src="https://github.com/user-attachments/assets/33d713b5-87f7-4409-8daa-b664276d6622" />
@@ -77,5 +80,6 @@ Configured monitoring agents from Datadog on both public and private EC2 instanc
 ## Alerting and Notification Integration
 Notification alerts were configured to be delivered via email and integrated with Slack to enable real-time communication and rapid incident response. Alerting policies were customized based on predefined thresholds for CPU utilization, memory usage, disk performance, and network activity, ensuring that critical events are promptly escalated to the appropriate channels. This setup enhanced operational visibility, improved response times, and ensured continuous monitoring across both public and private instances.
 
+<p align="center"> <img width="950" height="769" alt="Screenshot 2026-02-27 122950" src="https://github.com/user-attachments/assets/d2912d88-1c62-4986-8d1f-7524f4b49a55" />
 
 
