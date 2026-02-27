@@ -5,17 +5,17 @@ This documentation outlines the deployment of a segmented cloud network using pu
 
 
 ## Table Of Contents
-1. Introduction
-2. Prerequisites and Services Used
-3. AWS VPC Configuration
-4. Internet Gateway Setup and Routing
-5. NAT Gateway SetUp and Routing
-6. Configuration and Launching of Public and Private EC2 Instances
-7. Jump Host/ Bastion Connection
-8. Datadog Installation and Configuration
-9. Alerting and Notification Integration
-10. Errors and Troubleshooting
-11. Conclusion
+1. [Introduction](#introduction)
+2. [Prerequisites and Services Used](#prerequisites-and-services-used)
+3. [AWS VPC Configuration](#aws-vpc-configuration)
+4. [Internet Gateway Setup and Routing](#internet-gateway-setup-and-routing)
+5. [NAT Gateway SetUp and Routing](#nat-gateway-setup-and-routing)
+6. [Configuration and Launching of Public and Private EC2 Instances](#configuration-and-launching-of-public-and-private-ec2-instances)
+7. [Jump Host/ Bastion Connection](#jump-host-/-bastion-connection)
+8. [Datadog Installation and Configuration](#datadog-installation-and-configuration)
+9. [Alerting and Notification Integration](#alerting-and-notification-integration)
+10. [Errors and Troubleshooting](#errors-and-troubleshooting)
+11. [Conclusion](#conclusion)
 
 ## Introduction
 This project demonstrates the configuration of a segmented cloud infrastructure with NAT-based internet access and centralized monitoring. By combining resources hosted on Amazon Web Services with Datadog observability and Slack/email alerting, the environment provides secure connectivity, real-time visibility, and coordinated response to infrastructure events.
